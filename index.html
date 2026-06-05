@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Website Resmi Desa Sukaurip | Profil, Data dan Potensi Desa</title>
+
+<meta name="description" content="Website Resmi Desa Sukaurip yang menyajikan profil desa, data kependudukan, potensi desa, statistik desa dan informasi pembangunan desa.">
+
+<meta name="keywords" content="Desa Sukaurip, Website Desa, Profil Desa, Data Desa, Potensi Desa, Statistik Desa">
+
+<meta name="author" content="Pemerintah Desa Sukaurip">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+:root{
+--primary:#0f766e;
+--secondary:#14b8a6;
+--dark:#0f172a;
+}
+
+body{
+background:#f1f5f9;
+font-family:'Segoe UI',sans-serif;
+}
+
+.navbar{
+background:linear-gradient(90deg,var(--primary),var(--secondary));
+}
+
+.hero{
+background:
+linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200");
+background-size:cover;
+background-position:center;
+height:500px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:55px;
+font-weight:bold;
+}
+
+.hero p{
+font-size:20px;
+}
+
+.card-custom{
+border:none;
+border-radius:20px;
+transition:.3s;
+}
+
+.card-custom:hover{
+transform:translateY(-5px);
+}
+
+.stat-icon{
+font-size:35px;
+color:var(--primary);
+}
+
+.section-title{
+font-weight:bold;
+color:var(--primary);
+margin-bottom:25px;
+}
+
+.menu-card{
+text-decoration:none;
+color:black;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+<div class="container">
+
+<a class="navbar-brand fw-bold" href="#">
+🏡 Desa Sukaurip
+</a>
+
+<button class="navbar-toggler" type="button"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link active" href="index.html">Dashboard</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="profil.html">Profil</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="data-desa.html">Data Desa</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="potensi.html">Potensi</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="statistik.html">Statistik</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="rekomendasi.html">Rekomendasi</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="kontak.html">Kontak</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div>
+
+<h1>Desa Sukaurip</h1>
+
+<p>
+Website Resmi Profil, Data dan Potensi Desa
+</p>
+
+<a href="#statistik" class="btn btn-success btn-lg mt-3">
+Lihat Data Desa
+</a>
+
+</div>
+
+</section>
+
+<div class="container py-5" id="statistik">
+
+<h2 class="section-title text-center">
+Statistik Desa
+</h2>
+
+<div class="row g-4">
+
+<div class="col-md-3">
+<div class="card card-custom shadow p-4 text-center">
+<i class="fa-solid fa-users stat-icon"></i>
+<h5 class="mt-3">Penduduk</h5>
+<h2>4.520</h2>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card card-custom shadow p-4 text-center">
+<i class="fa-solid fa-house stat-icon"></i>
+<h5 class="mt-3">KK</h5>
+<h2>1.230</h2>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card card-custom shadow p-4 text-center">
+<i class="fa-solid fa-store stat-icon"></i>
+<h5 class="mt-3">UMKM</h5>
+<h2>87</h2>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card card-custom shadow p-4 text-center">
+<i class="fa-solid fa-school stat-icon"></i>
+<h5 class="mt-3">Fasilitas</h5>
+<h2>15</h2>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="container py-5">
+
+<h2 class="section-title text-center">
+Menu Informasi Desa
+</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<a href="profil.html" class="menu-card">
+<div class="card card-custom shadow p-4 text-center">
+<i class="fa-solid fa-building-columns fa-3x text-success"></i>
+<h4 class="mt-3">Profil Desa</h4>
+<p>Sejarah, visi misi dan struktur organisasi.</p>
+</div>
+</a>
+</div>
+
+<div class="col-md-4">
+<a href="data-desa.html" class="menu-card">
+<div class="card card-custom shadow p-4 text-center">
+<i class="fa-solid fa-database fa-3x text-success"></i>
+<h4 class="mt-3">Data Desa</h4>
+<p>Data kependudukan dan pendidikan.</p>
+</div>
+</a>
+</div>
+
+<div class="col-md-4">
+<a href="potensi.html" class="menu-card">
+<div class="card card-custom shadow p-4 text-center">
+<i class="fa-solid fa-seedling fa-3x text-success"></i>
+<h4 class="mt-3">Potensi Desa</h4>
+<p>UMKM, pertanian dan wisata desa.</p>
+</div>
+</a>
+</div>
+
+</div>
+
+</div>
+
+<div class="container py-5">
+
+<div class="card shadow p-4">
+
+<h3 class="mb-4">
+Grafik Pendidikan Masyarakat
+</h3>
+
+<canvas id="grafikPendidikan"></canvas>
+
+</div>
+
+</div>
+
+<div class="container py-5">
+
+<div class="card shadow p-4">
+
+<h3>Tentang Website</h3>
+
+<p>
+Website Resmi Desa Sukaurip  merupakan media informasi digital yang menyediakan profil desa, data kependudukan, potensi desa, statistik desa, serta rekomendasi program pembangunan guna mendukung transparansi informasi dan pelayanan kepada masyarakat.
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+new Chart(
+document.getElementById("grafikPendidikan"),
+{
+type:"bar",
+data:{
+labels:["SD","SMP","SMA","Diploma","S1"],
+datasets:[{
+label:"Jumlah Penduduk",
+data:[800,700,900,300,250]
+}]
+}
+}
+);
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+```

@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Data Desa Sukaurip</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+:root{
+    --primary:#0f766e;
+    --secondary:#14b8a6;
+    --dark:#0f172a;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#f8fafc;
+    margin:0;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+    padding:4px 0;
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+}
+
+.navbar-brand{
+    display:flex;
+    align-items:center;
+    text-decoration:none;
+}
+
+.navbar-brand img{
+    height:60px;
+}
+
+.logo-text{
+    margin-left:5px;
+    line-height:1.1;
+}
+
+.desa-title{
+    color:white;
+    font-size:1.5rem;
+    font-weight:700;
+}
+
+.desa-subtitle{
+    color:rgba(255,255,255,.85);
+    font-size:.8rem;
+}
+
+.navbar-nav .nav-link{
+    color:white!important;
+    font-size:.95rem;
+    font-weight:600;
+    padding:8px 12px!important;
+}
+
+.navbar-nav .nav-link.active{
+    border-bottom:2px solid white;
+}
+
+/* HERO */
+
+.hero{
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("assets/balaidesa.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    height:520px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:3rem;
+    font-weight:700;
+}
+
+.hero p{
+    font-size:1.1rem;
+    max-width:700px;
+    margin:auto;
+}
+
+/* CONTENT */
+
+.section-title{
+    color:var(--primary);
+    font-weight:700;
+}
+
+.card{
+    border:none;
+    border-radius:15px;
+}
+
+/* ======================
+   DATA UMUM DESA
+====================== */
+.data-umum{
+    padding-bottom:50px;
+}
+
+.data-umum-card{
+    background:#fff;
+    border:none;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.data-umum-header{
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:white;
+    text-align:center;
+    padding:18px;
+}
+
+.data-umum-header h2{
+    margin:0;
+    font-size:1.8rem;
+    font-weight:700;
+}
+
+.data-umum-body{
+    padding:30px;
+}
+
+/* TABLE DATA UMUM */
+.data-umum-table{
+    margin-bottom:0;
+}
+
+.data-umum-table th{
+    background:#f1f5f9;
+    color:#334155;
+    width:35%;
+    font-weight:600;
+    vertical-align:middle;
+}
+
+.data-umum-table td{
+    color:#475569;
+    vertical-align:middle;
+}
+
+.data-umum-table tr:hover{
+    background:#f8fafc;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.data-umum-header h2{
+    font-size:1.4rem;
+}
+
+.data-umum-table th{
+    width:45%;
+    font-size:.9rem;
+}
+
+.data-umum-table td{
+    font-size:.9rem;
+}
+
+}
+
+.data-umum-table th,
+.data-umum-table td{
+    text-align:center;
+    vertical-align:middle;
+}
+
+/* ======================
+   BATAS WILAYAH
+====================== */
+.batas-wilayah{
+    padding-bottom:50px;
+}
+
+.batas-card{
+    background:#fff;
+    border:none;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.batas-header{
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:white;
+    text-align:center;
+    padding:18px;
+}
+
+.batas-header h2{
+    margin:0;
+    font-size:1.8rem;
+    font-weight:700;
+}
+
+.batas-body{
+    padding:30px;
+}
+
+.batas-table{
+    margin-bottom:0;
+}
+
+.batas-table th{
+    background:#f1f5f9;
+    color:#334155;
+    width:35%;
+    font-weight:600;
+    text-align:center;
+    vertical-align:middle;
+}
+
+.batas-table td{
+    text-align:center;
+    color:#475569;
+    vertical-align:middle;
+}
+
+.batas-table tr:hover{
+    background:#f8fafc;
+}
+
+@media(max-width:768px){
+
+.batas-header h2{
+    font-size:1.4rem;
+}
+
+.batas-table th,
+.batas-table td{
+    font-size:.9rem;
+}
+
+}
+
+/* ======================
+   STATISTIK DESA
+====================== */
+
+.stat-card{
+    background:#fff;
+    border:none;
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+    height:100%;
+}
+
+.stat-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.stat-card h5{
+    color:#64748b;
+    font-size:1rem;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.stat-card h2{
+    color:var(--primary);
+    font-size:2.2rem;
+    font-weight:700;
+    margin:0;
+}
+
+.stat-card i{
+    font-size:2rem;
+    color:var(--secondary);
+    margin-bottom:15px;
+}
+
+/* ======================
+   DATA PENDIDIKAN
+====================== */
+
+.pendidikan{
+    padding-bottom:50px;
+}
+
+.pendidikan-card{
+    background:#fff;
+    border:none;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.pendidikan-header{
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:white;
+    text-align:center;
+    padding:18px;
+}
+
+.pendidikan-header h2{
+    margin:0;
+    font-size:1.8rem;
+    font-weight:700;
+}
+
+.pendidikan-body{
+    padding:30px;
+}
+
+.pendidikan-table{
+    margin-bottom:0;
+}
+
+.pendidikan-table thead{
+    background:var(--primary);
+    color:white;
+}
+
+.pendidikan-table th,
+.pendidikan-table td{
+    text-align:center;
+    vertical-align:middle;
+}
+
+.pendidikan-table tbody tr:hover{
+    background:#f8fafc;
+}
+
+@media(max-width:768px){
+
+.pendidikan-header h2{
+    font-size:1.4rem;
+}
+
+.pendidikan-table th,
+.pendidikan-table td{
+    font-size:.9rem;
+}
+
+}
+
+/* ======================
+   KELOMPOK USIA SEKOLAH
+====================== */
+.usia-sekolah{
+    padding-bottom:50px;
+}
+
+.usia-card{
+    background:#fff;
+    border:none;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.usia-header{
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:white;
+    text-align:center;
+    padding:18px;
+}
+
+.usia-header h2{
+    margin:0;
+    font-size:1.8rem;
+    font-weight:700;
+}
+
+.usia-body{
+    padding:30px;
+}
+
+.usia-table{
+    margin-bottom:0;
+}
+
+.usia-table thead{
+    background:var(--primary);
+    color:white;
+}
+
+.usia-table th,
+.usia-table td{
+    text-align:center;
+    vertical-align:middle;
+}
+
+.usia-table tbody tr:hover{
+    background:#f8fafc;
+}
+
+@media(max-width:768px){
+
+.usia-header h2{
+    font-size:1.4rem;
+}
+
+.usia-table th,
+.usia-table td{
+    font-size:.9rem;
+}
+
+}
+
+/* ======================
+   DATA MATA PENCAHARIAN
+====================== */
+.pekerjaan{
+    padding-bottom:50px;
+}
+
+.pekerjaan-card{
+    background:#fff;
+    border:none;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.pekerjaan-header{
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:white;
+    text-align:center;
+    padding:18px;
+}
+
+.pekerjaan-header h2{
+    margin:0;
+    font-size:1.8rem;
+    font-weight:700;
+}
+
+.pekerjaan-body{
+    padding:30px;
+}
+
+.pekerjaan-table{
+    margin-bottom:0;
+}
+
+.pekerjaan-table thead{
+    background:var(--primary);
+    color:white;
+}
+
+.pekerjaan-table th,
+.pekerjaan-table td{
+    text-align:center;
+    vertical-align:middle;
+}
+
+.pekerjaan-table tbody tr:hover{
+    background:#f8fafc;
+}
+
+@media(max-width:768px){
+
+.pekerjaan-header h2{
+    font-size:1.4rem;
+}
+
+.pekerjaan-table th,
+.pekerjaan-table td{
+    font-size:.9rem;
+}
+}
+
+/* ======================
+   FASILITAS UMUM
+====================== */
+
+.fasilitas{
+    padding-bottom:50px;
+}
+
+.fasilitas-card{
+    background:#fff;
+    border:none;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.fasilitas-header{
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:white;
+    text-align:center;
+    padding:18px;
+}
+
+.fasilitas-header h2{
+    margin:0;
+    font-size:1.8rem;
+    font-weight:700;
+}
+
+.fasilitas-body{
+    padding:30px;
+}
+
+.fasilitas-table{
+    margin-bottom:0;
+}
+
+.fasilitas-table thead{
+    background:var(--primary);
+    color:white;
+}
+
+.fasilitas-table th,
+.fasilitas-table td{
+    text-align:center;
+    vertical-align:middle;
+}
+
+.fasilitas-table tbody tr:hover{
+    background:#f8fafc;
+}
+
+@media(max-width:768px){
+
+.fasilitas-header h2{
+    font-size:1.4rem;
+}
+
+.fasilitas-table th,
+.fasilitas-table td{
+    font-size:.9rem;
+}
+}
+
+/* ======================
+   DATA SOSIAL MASYARAKAT
+====================== */
+.sosial{
+    padding-bottom:50px;
+}
+
+.sosial-card{
+    background:#fff;
+    border:none;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.sosial-header{
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:white;
+    text-align:center;
+    padding:18px;
+}
+
+.sosial-header h2{
+    margin:0;
+    font-size:1.8rem;
+    font-weight:700;
+}
+
+.sosial-body{
+    padding:30px;
+}
+
+.sosial-table{
+    margin-bottom:0;
+}
+
+.sosial-table thead{
+    background:var(--primary);
+    color:white;
+}
+
+.sosial-table th,
+.sosial-table td{
+    text-align:center;
+    vertical-align:middle;
+}
+
+.sosial-table tbody tr:hover{
+    background:#f8fafc;
+}
+
+@media(max-width:768px){
+
+.sosial-header h2{
+    font-size:1.4rem;
+}
+
+.sosial-table th,
+.sosial-table td{
+    font-size:.9rem;
+}
+}
+
+/* ======================
+   DATA PERTANIAN
+====================== */
+.pertanian{
+    padding-bottom:50px;
+}
+
+.pertanian-card{
+    background:#fff;
+    border:none;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.pertanian-header{
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:white;
+    text-align:center;
+    padding:18px;
+}
+
+.pertanian-header h2{
+    margin:0;
+    font-size:1.8rem;
+    font-weight:700;
+}
+
+.pertanian-body{
+    padding:30px;
+}
+
+.pertanian-table{
+    margin-bottom:0;
+}
+
+.pertanian-table thead{
+    background:var(--primary);
+    color:white;
+}
+
+.pertanian-table th,
+.pertanian-table td{
+    text-align:center;
+    vertical-align:middle;
+}
+
+.pertanian-table tbody tr:hover{
+    background:#f8fafc;
+}
+
+@media(max-width:768px){
+
+.pertanian-header h2{
+    font-size:1.4rem;
+}
+
+.pertanian-table th,
+.pertanian-table td{
+    font-size:.9rem;
+}
+}
+
+/* ======================
+   TEMPAT PERIBADATAN
+====================== */
+.ibadah{
+    padding-bottom:50px;
+}
+
+.ibadah-card{
+    background:#fff;
+    border:none;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.ibadah-header{
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:white;
+    text-align:center;
+    padding:18px;
+}
+
+.ibadah-header h2{
+    margin:0;
+    font-size:1.8rem;
+    font-weight:700;
+}
+
+.ibadah-body{
+    padding:30px;
+}
+
+.ibadah-table th,
+.ibadah-table td{
+    text-align:center;
+    vertical-align:middle;
+}
+
+.ibadah-table tbody tr:hover{
+    background:#f8fafc;
+}
+
+/* ======================
+   OLAHRAGA
+====================== */
+.olahraga{
+    padding-bottom:50px;
+}
+
+.olahraga-card{
+    background:#fff;
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    overflow:hidden;
+}
+
+.olahraga-header{
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:white;
+    text-align:center;
+    padding:18px;
+}
+
+.olahraga-body{
+    padding:30px;
+}
+
+.olahraga-table th,
+.olahraga-table td{
+    text-align:center;
+}
+
+/* ======================
+   DATA AIR BERSIH
+====================== */
+.air-bersih{
+    padding-bottom:50px;
+}
+
+.air-card{
+    background:#fff;
+    border:none;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.air-header{
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.air-header h2{
+    margin:0;
+    font-size:2rem;
+    font-weight:700;
+}
+
+.air-body{
+    padding:30px;
+}
+
+.air-table{
+    margin-bottom:0;
+}
+
+.air-table th{
+    background:#f8fafc;
+    font-weight:600;
+    width:40%;
+    text-align:left;
+}
+
+.air-table td{
+    text-align:left;
+}
+
+.air-table tbody tr:hover{
+    background:#f1f5f9;
+}
+
+/* FOOTER */
+
+.footer{
+    background:var(--dark);
+    color:white;
+    padding:25px 0;
+    margin-top:50px;
+    text-align:center;
+}
+
+@media(max-width:991px){
+
+.navbar-brand img{
+height:45px;
+}
+
+.desa-title{
+font-size:1.2rem;
+}
+
+.desa-subtitle{
+font-size:.7rem;
+}
+
+.hero{
+height:420px;
+}
+
+.hero h1{
+font-size:2rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<div class="container-fluid px-4">
+<a class="navbar-brand" href="index.html">
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhkE0jD3ztToz_79c2SRIeD_cMGR0X2vSmsXglerovJ4eDTF2NzcNfeNVIJ50zShRtmu0jXT8uCLkgVUvXGL2zck5N2pHthmvysYysOMAqvNtNiGZvCuIb2J9glZuFtxZKg5ZUoZZZYfH61/s400/Indramayu.png">
+<div class="logo-text">
+<div class="desa-title">Desa Sukaurip</div>
+<div class="desa-subtitle">Kecamatan Balongan • Kabupaten Indramayu</div>
+</div>
+
+</a>
+
+<button class="navbar-toggler" type="button"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse justify-content-end" id="menu">
+
+<ul class="navbar-nav">
+<li class="nav-item"><a class="nav-link" href="index.html">Dashboard</a></li>
+<li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
+<li class="nav-item"><a class="nav-link active" href="data-desa.html">Data Desa</a></li>
+<li class="nav-item"><a class="nav-link" href="potensi.html">Potensi</a></li>
+<li class="nav-item"><a class="nav-link" href="statistik.html">Statistik</a></li>
+<li class="nav-item"><a class="nav-link" href="pelayanan-publik.html">Pelayanan</a></li>
+<li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div class="container">
+<h1>Data Desa Sukaurip</h1>
+
+<p class="mt-3">
+Informasi lengkap mengenai wilayah, penduduk, pendidikan, pekerjaan dan fasilitas desa.
+</p>
+</div>
+</section>
+
+<!-- STATISTIK -->
+<section class="container py-5">
+<h2 class="section-title text-center mb-4">
+Statistik Desa
+</h2>
+
+<div class="row g-4">
+
+<div class="col-md-3">
+<div class="stat-card">
+<i class="fas fa-users"></i>
+<h5>Penduduk</h5>
+<h2>5.440</h2>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card stat-card">
+<i class="fas fa-home"></i>
+<h5>KK</h5>
+<h2>1.644</h2>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card stat-card">
+<i class="fas fa-mars"></i>
+<h5>Laki-Laki</h5>
+<h2>2.760</h2>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card stat-card">
+<i class="fas fa-venus"></i>
+<h5>Perempuan</h5>
+<h2>2.680</h2>
+</div>
+</div>
+</div>
+</section>
+
+<!-- DATA UMUM -->
+<section class="container data-umum">
+<div class="data-umum-card">
+<div class="data-umum-header">
+<h2>
+
+<i class="fas fa-map-marked-alt me-2"></i>
+Data Umum Desa
+</h2>
+</div>
+
+<div class="data-umum-body">
+<table class="table table-bordered data-umum-table">
+<tr><th>Nama Desa</th><td>Sukaurip</td></tr>
+<tr><th>Kecamatan</th><td>Balongan</td></tr>
+<tr><th>Kabupaten</th><td>Indramayu</td></tr>
+<tr><th>Provinsi</th><td>Jawa Barat</td></tr>
+<tr><th>Kode Pos</th><td>45217</td></tr>
+<tr><th>Luas Wilayah</th><td>150,27 Ha</td></tr>
+<tr><th>Jumlah Dusun</th><td>3 Dusun</td></tr>
+<tr><th>Jumlah RW</th><td>5 RW</td></tr>
+<tr><th>Jumlah RT</th><td>19 RT</td></tr>
+</table>
+</div>
+</div>
+</section>
+
+<!-- BATAS WILAYAH -->
+<section class="container batas-wilayah">
+<div class="batas-card">
+<div class="batas-header">
+<h2>
+<i class="fas fa-compass me-2"></i>
+Batas Wilayah Desa
+</h2>
+</div>
+
+<div class="batas-body">
+<table class="table table-bordered batas-table">
+<tr>
+<th>Sebelah Utara</th>
+<td>Desa Balongan dan Tegalurung</td>
+</tr>
+
+<tr>
+<th>Sebelah Selatan</th>
+<td>Desa Sukareja dan Tegal Sembadra</td>
+</tr>
+
+<tr>
+<th>Sebelah Timur</th>
+<td>Desa Balongan</td>
+</tr>
+
+<tr>
+<th>Sebelah Barat</th>
+<td>Desa Rawa Dalem</td>
+</tr>
+</table>
+</div>
+</div>
+</section>
+
+<!-- PENDIDIKAN -->
+<section class="container pendidikan">
+<div class="pendidikan-card">
+<div class="pendidikan-header">
+<h2>
+<i class="fas fa-graduation-cap me-2"></i>
+Data Pendidikan
+</h2>
+</div>
+
+<div class="pendidikan-body">
+<table class="table table-bordered pendidikan-table">
+<thead>
+<tr>
+<th>Tingkat Pendidikan</th>
+<th>Jumlah</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>SD</td>
+<td>1.815</td>
+</tr>
+
+<tr>
+<td>SLTP</td>
+<td>1.091</td>
+</tr>
+
+<tr>
+<td>SLTA</td>
+<td>1.110</td>
+</tr>
+
+<tr>
+<td>D1 / D3</td>
+<td>41</td>
+</tr>
+
+<tr>
+<td>S1 / Universitas</td>
+<td>56</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<!-- KELOMPOK USIA SEKOLAH -->
+<section class="container usia-sekolah">
+<div class="usia-card">
+<div class="usia-header">
+<h2>
+<i class="fas fa-child-reaching me-2"></i>
+Kelompok Usia Sekolah
+</h2>
+</div>
+
+<div class="usia-body">
+
+<table class="table table-bordered usia-table">
+
+<thead>
+<tr>
+<th>Kelompok Umur</th>
+<th>Jumlah (Jiwa)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>7 - 12 Tahun</td>
+<td>215</td>
+</tr>
+
+<tr>
+<td>13 - 15 Tahun</td>
+<td>69</td>
+</tr>
+
+<tr>
+<td>16 - 18 Tahun</td>
+<td>206</td>
+</tr>
+
+<tr>
+<td>19 - 24 Tahun</td>
+<td>90</td>
+</tr>
+
+<tr class="table-success fw-bold">
+<td>Jumlah</td>
+<td>580</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<!-- PEKERJAAN -->
+<!-- DATA MATA PENCAHARIAN -->
+
+<section class="container pekerjaan">
+
+<div class="pekerjaan-card">
+
+<div class="pekerjaan-header">
+<h2>
+<i class="fas fa-briefcase me-2"></i>
+Data Mata Pencaharian
+</h2>
+</div>
+
+<div class="pekerjaan-body">
+
+<table class="table table-bordered pekerjaan-table">
+
+<thead>
+<tr>
+<th>Jenis Pekerjaan</th>
+<th>Jumlah</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Petani</td>
+<td>97 Orang</td>
+</tr>
+
+<tr>
+<td>Buruh Tani</td>
+<td>128 Orang</td>
+</tr>
+
+<tr>
+<td>Dukun Kampung Terlatih</td>
+<td>1 Orang</td>
+</tr>
+
+<tr>
+<td>Pegawai Negeri</td>
+<td>54 Orang</td>
+</tr>
+
+<tr>
+<td>Pedagang</td>
+<td>35 Orang</td>
+</tr>
+
+<tr>
+<td>Perbengkelan</td>
+<td>5 Orang</td>
+</tr>
+
+<tr>
+<td>TNI / POLRI</td>
+<td>12 Orang</td>
+</tr>
+
+<tr>
+<td>Pensiunan PNS</td>
+<td>32 Orang</td>
+</tr>
+
+<tr>
+<td>Guru Swasta</td>
+<td>9 Orang</td>
+</tr>
+
+<tr>
+<td>Karyawan Swasta</td>
+<td>59 Orang</td>
+</tr>
+
+<tr>
+<td>Buruh Migran</td>
+<td>258 Orang</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+</div>
+</section>
+
+<!-- FASILITAS UMUM DESA -->
+<section class="container fasilitas">
+<div class="fasilitas-card">
+<div class="fasilitas-header">
+<h2>
+<i class="fas fa-building me-2"></i>
+Fasilitas Umum Desa
+</h2>
+</div>
+
+<div class="fasilitas-body">
+<table class="table table-bordered fasilitas-table">
+
+<thead>
+<tr>
+<th>Fasilitas</th>
+<th>Jumlah</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Balai Desa</td>
+<td>1 Unit</td>
+</tr>
+
+<tr>
+<td>Masjid</td>
+<td>2 Unit</td>
+</tr>
+
+<tr>
+<td>Mushola</td>
+<td>11 Unit</td>
+</tr>
+
+<tr>
+<td>Madrasah Diniyah (MDA)</td>
+<td>2 Unit</td>
+</tr>
+
+<tr>
+<td>Posyandu</td>
+<td>5 Unit</td>
+</tr>
+
+<tr>
+<td>Tower Telekomunikasi</td>
+<td>1 Unit</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<!-- DATA SOSIAL MASYARAKAT -->
+<section class="container sosial">
+<div class="sosial-card">
+<div class="sosial-header">
+<h2>
+<i class="fas fa-hands-helping me-2"></i>
+Data Sosial Masyarakat
+</h2>
+</div>
+
+<div class="sosial-body">
+<table class="table table-bordered sosial-table">
+
+<thead>
+<tr>
+<th>Jenis Data Sosial</th>
+<th>Jumlah</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Penyandang Disabilitas</td>
+<td>1 Orang</td>
+</tr>
+
+<tr>
+<td>Rumah Tidak Layak Huni (RTLH)</td>
+<td>20 Unit</td>
+</tr>
+
+<tr>
+<td>Keluarga Fakir Miskin</td>
+<td>28 KK</td>
+</tr>
+
+<tr>
+<td>ODGJ</td>
+<td>1 Orang</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<!-- DATA PERTANIAN -->
+<section class="container pertanian">
+<div class="pertanian-card">
+<div class="pertanian-header">
+<h2>
+<i class="fas fa-seedling me-2"></i>
+Data Pertanian
+</h2>
+</div>
+
+<div class="pertanian-body">
+<table class="table table-bordered pertanian-table">
+
+<thead>
+<tr>
+<th>Jenis Data Pertanian</th>
+<th>Jumlah</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Luas Sawah</td>
+<td>61 Ha</td>
+</tr>
+
+<tr>
+<td>Tadah Hujan</td>
+<td>17 Ha</td>
+</tr>
+
+<tr>
+<td>Irigasi 1/2 Teknis</td>
+<td>2 Ha</td>
+</tr>
+
+<tr>
+<td>Irigasi Sederhana</td>
+<td>2 Ha</td>
+</tr>
+
+<tr>
+<td>Produksi Padi</td>
+<td>84 Ton</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<!-- TEMPAT PERIBADATAN -->
+<section class="container ibadah">
+<div class="ibadah-card">
+<div class="ibadah-header">
+<h2>
+<i class="fas fa-mosque me-2"></i>
+Tempat Peribadatan
+</h2>
+</div>
+
+<div class="ibadah-body">
+
+<table class="table table-bordered ibadah-table">
+
+<thead>
+<tr>
+<th>Jenis</th>
+<th>Jumlah</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Masjid</td>
+<td>2 Unit</td>
+</tr>
+
+<tr>
+<td>Mushola</td>
+<td>11 Unit</td>
+</tr>
+
+<tr>
+<td>Madrasah Diniyah</td>
+<td>2 Unit</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<!-- DATA OLAHRAGA -->
+<section class="container olahraga">
+
+<div class="olahraga-card">
+
+<div class="olahraga-header">
+<h2>
+<i class="fas fa-futbol me-2"></i>
+Data Olahraga
+</h2>
+</div>
+
+<div class="olahraga-body">
+<table class="table table-bordered olahraga-table">
+<thead>
+<tr>
+<th>Klub Olahraga</th>
+<th>Jumlah</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Sepak Bola</td>
+<td>3 Klub</td>
+<td>Aktif</td>
+</tr>
+
+<tr>
+<td>Bola Volly</td>
+<td>1 Klub</td>
+<td>Aktif</td>
+</tr>
+
+<tr>
+<td>Bulu Tangkis</td>
+<td>2 Klub</td>
+<td>Aktif</td>
+</tr>
+
+<tr>
+<td>Tenis Meja</td>
+<td>2 Klub</td>
+<td>Aktif</td>
+</tr>
+
+<tr>
+<td>Senam Sehat</td>
+<td>1 Klub</td>
+<td>Aktif</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<!-- AIR BERSIH -->
+<section class="container air-bersih pb-5">
+<div class="air-card">
+<div class="air-header">
+<h2>
+<i class="fas fa-droplet me-2"></i>
+Data Air Bersih
+</h2>
+</div>
+
+<div class="air-body">
+
+<table class="table table-bordered air-table">
+
+<tbody>
+
+<tr>
+<th>Sumur Gali</th>
+<td>50 Unit</td>
+</tr>
+
+<tr>
+<th>Pelanggan PAM</th>
+<td>900 KK</td>
+</tr>
+
+<tr>
+<th>Depot Air Isi Ulang</th>
+<td>5 Unit</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<!-- DATA PETERNAKAN -->
+<section class="container pertanian">
+
+<div class="pertanian-card">
+
+<div class="pertanian-header">
+<h2>
+<i class="fas fa-cow me-2"></i>
+Data Peternakan
+</h2>
+</div>
+
+<div class="pertanian-body">
+
+<table class="table table-bordered pertanian-table">
+
+<thead>
+<tr>
+<th>Komoditas</th>
+<th>Produksi</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Ayam Kampung</td>
+<td>0,36 Ton</td>
+</tr>
+
+<tr>
+<td>Itik</td>
+<td>0,28 Ton</td>
+</tr>
+
+<tr>
+<td>Domba</td>
+<td>0,7 Ton</td>
+</tr>
+
+<tr>
+<td>Entog / Manila</td>
+<td>0,27 Ton</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="container">
+
+<p class="mb-0">
+Pemerintah Desa Sukaurip - Kecamatan Balongan, Kabupaten Indramayu
+</p>
+
+</div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

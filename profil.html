@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Profil Desa Sukaurip</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+:root{
+    --primary:#0f766e;
+    --secondary:#14b8a6;
+    --dark:#0f172a;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#f8fafc;
+    margin:0;
+}
+
+/* ===== NAVBAR ===== */
+
+.navbar{
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+    padding:1px 0;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+
+.navbar-brand{
+    display:flex;
+    align-items:center;
+    text-decoration:none;
+}
+
+.navbar-brand img{
+    height:60px;
+    width:auto;
+}
+
+.logo-text{
+    margin-left:3px;
+    line-height:1.1;
+}
+
+.desa-title{
+    color:white;
+    font-size:1.5rem;
+    font-weight:700;
+}
+
+.desa-subtitle{
+    color:rgba(255,255,255,.85);
+    font-size:.8rem;
+}
+
+.navbar-nav .nav-link{
+    color:white !important;
+    font-size:.95rem;
+    font-weight:600;
+    padding:8px 12px !important;
+}
+
+.navbar-nav .nav-link:hover{
+    color:#d1fae5 !important;
+}
+
+.navbar-nav .nav-link.active{
+    border-bottom:2px solid white;
+}
+
+/* ===== HERO ===== */
+
+.hero{
+    background:
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url("assets/balaidesa.jpeg");
+
+    background-size:cover;
+    background-position:center;
+
+    height:520px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:3rem;
+    font-weight:700;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+/* ===== CONTENT ===== */
+
+.section-title{
+    color:var(--primary);
+    font-weight:700;
+}
+
+.card-custom{
+    border:none;
+    border-radius:15px;
+}
+
+/* ===== FOOTER ===== */
+
+.footer{
+    background:var(--dark);
+    color:white;
+    padding:25px 0;
+    margin-top:50px;
+    text-align:center;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:991px){
+
+    .navbar-brand img{
+        height:45px;
+    }
+
+    .desa-title{
+        font-size:1.2rem;
+    }
+
+    .desa-subtitle{
+        font-size:.7rem;
+    }
+
+    .hero{
+        height:420px;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+}
+
+/* TABEL RIWAYAT KUWU */
+
+.kuwu-card{
+border:none;
+border-radius:20px;
+overflow:hidden;
+}
+
+.kuwu-table thead{
+background:linear-gradient(90deg,#0f766e,#14b8a6);
+color:white;
+}
+
+.kuwu-table th{
+padding:15px;
+font-size:16px;
+border:none;
+}
+
+.kuwu-table td{
+padding:12px;
+vertical-align:middle;
+}
+
+.kuwu-table tbody tr:hover{
+background:#f0fdfa;
+transition:.3s;
+}
+
+.badge-pjk{
+background:#f59e0b;
+padding:6px 10px;
+border-radius:20px;
+color:white;
+font-size:12px;
+}
+
+.badge-aktif{
+background:#16a34a;
+padding:6px 10px;
+border-radius:20px;
+color:white;
+font-size:12px;
+}
+
+.badge-kosong{
+background:#e5e7eb;
+padding:6px 10px;
+border-radius:20px;
+color:#374151;
+font-size:12px;
+}
+
+/*KOLOM RT*/
+/* TABEL RT RW */
+
+.rt-table{
+border-radius:15px;
+overflow:hidden;
+}
+
+.rt-table thead{
+background:linear-gradient(90deg,#0f766e,#14b8a6);
+color:white;
+}
+
+.rt-table th{
+padding:14px;
+text-align:center;
+border:none;
+}
+
+.rt-table td{
+padding:12px;
+vertical-align:middle;
+}
+
+.rw-row{
+background:#d1fae5 !important;
+font-weight:700;
+color:#065f46;
+}
+
+.rt-row:hover{
+background:#f0fdfa;
+transition:.3s;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+<div class="container-fluid px-4">
+
+<a class="navbar-brand" href="index.html">
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhkE0jD3ztToz_79c2SRIeD_cMGR0X2vSmsXglerovJ4eDTF2NzcNfeNVIJ50zShRtmu0jXT8uCLkgVUvXGL2zck5N2pHthmvysYysOMAqvNtNiGZvCuIb2J9glZuFtxZKg5ZUoZZZYfH61/s400/Indramayu.png">
+
+<div class="logo-text">
+<div class="desa-title">Desa Sukaurip</div>
+<div class="desa-subtitle">
+Kecamatan Balongan • Kabupaten Indramayu
+</div>
+</div>
+
+</a>
+
+<button class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse justify-content-end" id="menu">
+
+<ul class="navbar-nav">
+
+<li class="nav-item">
+<a class="nav-link" href="index.html">Dashboard</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="profil.html">Profil</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="data-desa.html">Data Desa</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="potensi.html">Potensi</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="statistik.html">Statistik</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="pelayanan-publik.html">Pelayanan</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="kontak.html">Kontak</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<h1>Profil Desa Sukaurip</h1>
+
+<p class="mt-3">
+Sejarah, Visi Misi dan Struktur Organisasi Pemerintah Desa Sukaurip
+</p>
+
+</div>
+
+</section>
+
+<!-- SEJARAH -->
+
+<section class="container py-5">
+
+<div class="card card-custom shadow p-5">
+
+<h2 class="section-title text-center mb-4">
+Sejarah Desa Sukaurip
+</h2>
+
+<p>
+Desa Sukaurip merupakan salah satu desa yang berada di Kecamatan Balongan,
+Kabupaten Indramayu. Desa ini memiliki sejarah panjang yang diwariskan secara turun-temurun oleh para sesepuh desa.
+</p>
+
+<p>
+Menurut cerita masyarakat setempat, wilayah Sukaurip mulai berkembang sejak masa Kerajaan Pajajaran dan terus berkembang hingga menjadi desa yang maju seperti sekarang.
+</p>
+
+<p>
+Nama Sukaurip dipercaya berasal dari istilah "Seneng Urip" yang berarti hidup bahagia dan sejahtera.
+</p>
+
+<div class="text-center mt-4">
+
+<a href="sejarah.html" class="btn btn-success btn-lg">
+Baca Sejarah Lengkap
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- VISI MISI -->
+
+<section class="container pb-5">
+
+<div class="row g-4">
+
+<div class="col-md-6">
+
+<div class="card card-custom shadow p-4 h-100">
+
+<h3 class="text-success">
+<i class="fa-solid fa-eye"></i> Visi
+</h3>
+
+<hr>
+
+<p>
+"Mewujudkan Desa Sukaurip yang maju, mandiri, sejahtera,
+transparan dan berbasis teknologi."
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-6">
+
+<div class="card card-custom shadow p-4 h-100">
+
+<h3 class="text-success">
+<i class="fa-solid fa-bullseye"></i> Misi
+</h3>
+
+<hr>
+
+<ul>
+<li>Meningkatkan pelayanan masyarakat.</li>
+<li>Mengembangkan potensi desa.</li>
+<li>Mendorong pertumbuhan UMKM.</li>
+<li>Meningkatkan kualitas SDM masyarakat.</li>
+<li>Mewujudkan tata kelola desa yang transparan.</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- RIWAYAT KUWU -->
+
+<section class="container pb-5">
+
+<div class="card kuwu-card shadow-lg">
+
+<div class="card-body p-5">
+
+<h2 class="section-title text-center mb-4">
+<i class="fa-solid fa-crown"></i>
+Riwayat Kuwu Desa Sukaurip
+</h2>
+
+<p class="text-center text-muted mb-4">
+Daftar Kuwu Desa Sukaurip dari masa ke masa
+</p>
+
+<div class="table-responsive">
+
+<table class="table kuwu-table align-middle">
+
+<thead>
+
+<tr>
+<th width="70">No</th>
+<th>Nama Kuwu</th>
+<th>Masa Jabatan</th>
+<th>Keterangan</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>1</td>
+<td>Ki Geden Tringgading Den Supa</td>
+<td>-</td>
+<td><span class="badge-kosong">Perintis Desa</span></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Sugi</td>
+<td>-</td>
+<td><span class="badge-kosong">-</span></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Sari</td>
+<td>-</td>
+<td><span class="badge-kosong">-</span></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Karjem</td>
+<td>-</td>
+<td><span class="badge-kosong">-</span></td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Sarbingah</td>
+<td>-</td>
+<td><span class="badge-kosong">-</span></td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Sayen</td>
+<td>-</td>
+<td><span class="badge-kosong">-</span></td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Karti</td>
+<td>-</td>
+<td><span class="badge-kosong">-</span></td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>Darka</td>
+<td>-</td>
+<td><span class="badge-kosong">-</span></td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>Karsinah</td>
+<td>-</td>
+<td><span class="badge-kosong">-</span></td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>Terwan</td>
+<td>-</td>
+<td><span class="badge-kosong">-</span></td>
+</tr>
+
+<tr>
+<td>11</td>
+<td>Kalun</td>
+<td>-</td>
+<td><span class="badge-kosong">-</span></td>
+</tr>
+
+<tr>
+<td>12</td>
+<td>Salin</td>
+<td>-</td>
+<td><span class="badge-kosong">-</span></td>
+</tr>
+
+<tr>
+<td>13</td>
+<td>H. Saleh</td>
+<td>-</td>
+<td><span class="badge-kosong">-</span></td>
+</tr>
+
+<tr>
+<td>14</td>
+<td>Tjabik</td>
+<td>Zaman Jepang</td>
+<td><span class="badge-kosong">-</span></td>
+</tr>
+
+<tr>
+<td>15</td>
+<td>Duljamil</td>
+<td>1947 - 1948</td>
+<td><span class="badge-kosong">-</span></td>
+</tr>
+
+<tr>
+<td>16</td>
+<td>Wana</td>
+<td>1948 - 1965</td>
+<td><span class="badge-kosong">-</span></td>
+</tr>
+
+<tr>
+<td>17</td>
+<td>H. Djaeni Mashuri</td>
+<td>1965 - 1973</td>
+<td><span class="badge-kosong">-</span></td>
+</tr>
+
+<tr>
+<td>18</td>
+<td>Kurnadi</td>
+<td>1973 - 1978</td>
+<td><span class="badge-pjk">PJK</span></td>
+</tr>
+
+<tr>
+<td>19</td>
+<td>H. Imron</td>
+<td>1978 - 1983</td>
+<td><span class="badge-kosong">-</span></td>
+</tr>
+
+<tr>
+<td>20</td>
+<td>Tjasnata</td>
+<td>1983 - 1988</td>
+<td><span class="badge-pjk">PJK</span></td>
+</tr>
+
+<tr>
+<td>21</td>
+<td>Sahuri</td>
+<td>1988 - 1998</td>
+<td><span class="badge-kosong">-</span></td>
+</tr>
+
+<tr>
+<td>22</td>
+<td>Rhastam</td>
+<td>1998 - 2006</td>
+<td><span class="badge-kosong">-</span></td>
+</tr>
+
+<tr>
+<td>23</td>
+<td>M. Nurfatah</td>
+<td>2006 - 2013</td>
+<td><span class="badge-kosong">-</span></td>
+</tr>
+
+<tr>
+<td>24</td>
+<td>Dulkodar, S.H.</td>
+<td>2013 - 2014</td>
+<td><span class="badge-pjk">PJK</span></td>
+</tr>
+
+<tr>
+<td>25</td>
+<td>Rais</td>
+<td>2014 - 2015</td>
+<td><span class="badge-pjk">PJK</span></td>
+</tr>
+
+<tr>
+<td>26</td>
+<td>Jahadi</td>
+<td>2015 - 2021</td>
+<td><span class="badge-kosong">-</span></td>
+</tr>
+
+<tr>
+<td>27</td>
+<td>Warsono, S.Sos.</td>
+<td>2021 - 2021</td>
+<td><span class="badge-pjk">PJK</span></td>
+</tr>
+
+<tr class="table-success fw-bold">
+<td>28</td>
+<td>Casmuri</td>
+<td>2021 - 2029</td>
+<td><span class="badge-aktif">Kuwu Aktif</span></td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STRUKTUR ORGANISASI -->
+
+<section class="container pb-5">
+
+<div class="card card-custom shadow p-5">
+
+<h2 class="section-title mb-4">
+<i class="fa-solid fa-sitemap"></i>
+Struktur Organisasi Pemerintah Desa Sukaurip
+</h2>
+
+<div class="table-responsive">
+
+<table class="table table-bordered table-striped text-center">
+
+<thead class="table-success">
+
+<tr>
+<th>No</th>
+<th>Jabatan</th>
+<th>Nama</th>
+<th>Pendidikan</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr><td>1</td><td>Kuwu</td><td>Casmuri</td><td>SMK</td></tr>
+<tr><td>2</td><td>Sekretaris Desa</td><td>Taryudi</td><td>SLTA</td></tr>
+<tr><td>3</td><td>Tata Usaha</td><td>Risma Srisdiani, S.E</td><td>S1</td></tr>
+<tr><td>4</td><td>Bendahara</td><td>Mallah Putri Kurnia, S.H</td><td>S1</td></tr>
+<tr><td>5</td><td>Kliwon</td><td>Tasinih</td><td>SLTA</td></tr>
+<tr><td>6</td><td>Lurah</td><td>Aziz Nugraha</td><td>SLTA</td></tr>
+<tr><td>7</td><td>Lebe</td><td>Ahmad Zaky Assakury</td><td>SLTA</td></tr>
+<tr><td>8</td><td>Raksa Bumi</td><td>Ighna</td><td>SLTA</td></tr>
+<tr><td>9</td><td>Bekel 1</td><td>Bisma Sang Wicaksana</td><td>SLTA</td></tr>
+<tr><td>10</td><td>Bekel 2</td><td>Dodi Sambodo</td><td>SLTA</td></tr>
+<tr><td>11</td><td>Bekel 3</td><td>Weny Liyah</td><td>SLTA</td></tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DATA RW DAN RT -->
+
+<section class="container pb-5">
+
+<div class="card shadow-lg border-0">
+
+<div class="card-body p-5">
+
+<h2 class="section-title text-center mb-4">
+<i class="fa-solid fa-users"></i>
+Data Ketua RW dan RT Desa Sukaurip
+</h2>
+
+<div class="table-responsive">
+
+<table class="table rt-table table-bordered align-middle">
+
+<thead>
+
+<tr>
+<th width="80">No</th>
+<th>Jabatan</th>
+<th>Nama</th>
+<th>Pendidikan</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr class="rw-row">
+<td>I</td>
+<td>RW 001</td>
+<td>Sairoh</td>
+<td>SLTP</td>
+</tr>
+
+<tr class="rt-row"><td></td><td>RT 001</td><td>Yati Widiyawati</td><td>SLTA</td></tr>
+<tr class="rt-row"><td></td><td>RT 002</td><td>Carsinah</td><td>SLTP</td></tr>
+<tr class="rt-row"><td></td><td>RT 003</td><td>Kasno</td><td>SD</td></tr>
+<tr class="rt-row"><td></td><td>RT 004</td><td>Asmawi</td><td>SD</td></tr>
+<tr class="rt-row"><td></td><td>RT 017</td><td>Kasturi</td><td>SD</td></tr>
+
+<tr class="rw-row">
+<td>II</td>
+<td>RW 002</td>
+<td>Ropikoh</td>
+<td>SLTP</td>
+</tr>
+
+<tr class="rt-row"><td></td><td>RT 005</td><td>Atmi</td><td>SD</td></tr>
+<tr class="rt-row"><td></td><td>RT 006</td><td>Mastirih</td><td>SD</td></tr>
+<tr class="rt-row"><td></td><td>RT 007</td><td>Katiri</td><td>SLTP</td></tr>
+<tr class="rt-row"><td></td><td>RT 008</td><td>Subardi</td><td>SD</td></tr>
+<tr class="rt-row"><td></td><td>RT 009</td><td>Narwita</td><td>SD</td></tr>
+
+<tr class="rw-row">
+<td>III</td>
+<td>RW 003</td>
+<td>Julekah</td>
+<td>SD</td>
+</tr>
+
+<tr class="rt-row"><td></td><td>RT 010</td><td>Rasiyem</td><td>SLTP</td></tr>
+<tr class="rt-row"><td></td><td>RT 011</td><td>Pandi</td><td>SD</td></tr>
+<tr class="rt-row"><td></td><td>RT 012</td><td>Rasmin Gunawan</td><td>SLTP</td></tr>
+
+<tr class="rw-row">
+<td>IV</td>
+<td>RW 004</td>
+<td>Khuraesin</td>
+<td>SLTA</td>
+</tr>
+
+<tr class="rt-row"><td></td><td>RT 013</td><td>Suskini</td><td>SLTP</td></tr>
+<tr class="rt-row"><td></td><td>RT 014</td><td>Sunesrih</td><td>SD</td></tr>
+<tr class="rt-row"><td></td><td>RT 015</td><td>Sukimah</td><td>SLTA</td></tr>
+<tr class="rt-row"><td></td><td>RT 016</td><td>Uminah</td><td>SLTA</td></tr>
+
+<tr class="rw-row">
+<td>V</td>
+<td>RW 005</td>
+<td>Nurkamad</td>
+<td>S1</td>
+</tr>
+
+<tr class="rt-row"><td></td><td>RT 018</td><td>Taminah</td><td>SLTP</td></tr>
+<tr class="rt-row"><td></td><td>RT 019</td><td>Nursiatun</td><td>SLTP</td></tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="container">
+
+<p class="mb-0">
+Pemerintah Desa Sukaurip - Kecamatan Balongan, Kabupaten Indramayu
+</p>
+
+</div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
